@@ -6,7 +6,6 @@ Blockchain example written in Swift.
 
 ## TODO
 
-- [ ] Improve blockHash calculation
 - [ ] Add basic unit tests classes
 - [ ] Add Continuous Integration
 - [ ] Add better hashing algorithm
