@@ -5,7 +5,7 @@ struct Block {
     let transactions: [String]
     
     var blockHash: Int {
-        return -1
+        return -1 // TODO: Improve calculation
     }
     
     init(previousHash: Int, transactions: [String]) {
