@@ -1,6 +1,6 @@
 struct Blockchain {
     
-    private var blocks: [Block]
+    private(set) var blocks: [Block]
     
     init() {
         blocks = [Block]()

@@ -6,7 +6,7 @@ Blockchain example written in Swift.
 
 ## TODO
 
-- [ ] Add basic unit tests classes
 - [ ] Add Continuous Integration
+- [ ] Add Code Coverage
 - [ ] Add better hashing algorithm
 - [ ] Add proof-of-work mechanism
