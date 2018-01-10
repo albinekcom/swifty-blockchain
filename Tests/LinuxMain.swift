@@ -3,7 +3,7 @@ import XCTest
 @testable import SwiftyBlockchainTests
 
 XCTMain([
-    testCase(BasicHasher.allTests),
+    testCase(BasicHasherTests.allTests),
     testCase(BlockTests.allTests),
     testCase(BlockchainTests.allTests)
 ])
