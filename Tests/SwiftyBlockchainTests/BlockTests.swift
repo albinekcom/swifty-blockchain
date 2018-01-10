@@ -19,4 +19,9 @@ final class BlockTests: XCTestCase {
         XCTAssertEqual("blockHash: 4704044732640366145, transactions: [\"test transaction 2\"], previousHash: 0", block2.description)
     }
     
+    static var allTests = [
+        ("testBlockHash", testBlockHash),
+        ("testDescription", testDescription),
+    ]
+    
 }

@@ -29,4 +29,9 @@ final class BlockchainTests: XCTestCase {
         XCTAssertEqual("Blockchain:\n  #0: blockHash: -8301865496324989072, transactions: [\"test transaction 1\"], previousHash: 0;\n  #1: blockHash: -7150782369769308554, transactions: [\"test transaction 1\", \"test transaction 2\"], previousHash: 0;\n", blockchain.description)
     }
     
+    static var allTests = [
+        ("testAppendBlock", testAppendBlock),
+        ("testDescription", testDescription),
+    ]
+    
 }
