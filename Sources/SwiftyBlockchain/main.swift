@@ -1,3 +1,5 @@
+import SwiftyBlockchainCore
+
 var blockchain = Blockchain()
 
 let genesisBlock = Block(previousHash: 0, transactions: ["genesis block"])

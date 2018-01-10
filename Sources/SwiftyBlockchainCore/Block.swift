@@ -1,16 +1,18 @@
-struct Block {
+import Foundation
+
+public struct Block {
     
-    let previousHash: Int
+    public let previousHash: Int
     
-    let transactions: [String]
+    public let transactions: [String]
     
-    var blockHash: Int {
+    public var blockHash: Int {
         let hashes = [previousHash, transactions.description.hashValue]
         
         return hashes.description.hashValue
     }
     
-    init(previousHash: Int, transactions: [String]) {
+    public init(previousHash: Int, transactions: [String]) {
         self.previousHash = previousHash
         self.transactions = transactions
     }
@@ -19,7 +21,7 @@ struct Block {
 
 extension Block: CustomStringConvertible {
     
-    var description: String {
+    public var description: String {
         return "blockHash: \(blockHash), transactions: \(transactions), previousHash: \(previousHash)"
     }
     

@@ -1,12 +1,14 @@
-struct Blockchain {
+import Foundation
+
+public struct Blockchain {
     
-    private(set) var blocks: [Block]
+    public private(set) var blocks: [Block]
     
-    init() {
+    public init() {
         blocks = [Block]()
     }
     
-    mutating func append(block: Block) {
+    public mutating func append(block: Block) {
         blocks.append(block)
     }
     
@@ -14,7 +16,7 @@ struct Blockchain {
 
 extension Blockchain: CustomStringConvertible {
     
-    var description: String {
+    public var description: String {
         var description = "Blockchain:\n"
         
         for (index, block) in blocks.enumerated() {

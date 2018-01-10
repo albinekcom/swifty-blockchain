@@ -4,16 +4,20 @@ import PackageDescription
 
 let package = Package(
     name: "SwiftyBlockchain",
-
-    dependencies: [],
-
+    
     targets: [
         .target(
             name: "SwiftyBlockchain",
-            dependencies: []),
-
+            dependencies: ["SwiftyBlockchainCore"]
+        ),
+        
+        .target(
+            name: "SwiftyBlockchainCore"
+        ),
+        
         .testTarget(
             name: "SwiftyBlockchainTests",
-            dependencies: [])
+            dependencies: ["SwiftyBlockchainCore"]
+        )
     ]
 )
