@@ -7,9 +7,9 @@ public struct Block {
     public let transactions: [String]
     
     public var blockHash: Int {
-        let hashes = [previousHash, transactions.description.hashValue]
+        let hashes = [previousHash, BasicHasher.hash(input: transactions.description)]
         
-        return hashes.description.hashValue
+        return BasicHasher.hash(input: hashes.description)
     }
     
     public init(previousHash: Int, transactions: [String]) {
