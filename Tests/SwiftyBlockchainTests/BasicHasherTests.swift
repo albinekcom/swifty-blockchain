@@ -8,7 +8,7 @@ final class BasicHasherTests: XCTestCase {
         XCTAssertEqual(7572963592359151, BasicHasher.hash(input: "test1234"))
     }
     
-    static var allTests = [
+    static let allTests = [
         ("testHash", testHash)
     ]
     
