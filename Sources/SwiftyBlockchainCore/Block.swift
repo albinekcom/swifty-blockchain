@@ -2,9 +2,9 @@ import Foundation
 
 public struct Block {
     
-    public let previousHash: Int
+    let previousHash: Int
     
-    public let transactions: [String]
+    let transactions: [String]
     
     public var blockHash: Int {
         let hashes = [previousHash, BasicHasher.hash(input: transactions.description)]
