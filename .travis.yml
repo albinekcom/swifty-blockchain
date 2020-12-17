@@ -3,13 +3,16 @@ os:
   - osx
 
 osx_image:
-  - xcode10.1
+  - xcode12.2
 
 env:
-  - SWIFT_VERSION=4.2.1
+  - SWIFT_VERSION=5.3
 
 install:
   - eval "$(curl -sL https://swiftenv.fuller.li/install.sh)"
 
 script:
-  - swift test --parallel
+  - swift test
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
