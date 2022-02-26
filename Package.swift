@@ -6,14 +6,9 @@ let package = Package(
     name: "SwiftyBlockchain",
     
     targets: [
-        .executableTarget(
-            name: "SwiftyBlockchain",
-            dependencies: []
-        ),
+        .executableTarget(name: "SwiftyBlockchain"),
         
-        .testTarget(
-            name: "SwiftyBlockchainTests",
-            dependencies: ["SwiftyBlockchain"]
-        ),
+        .testTarget(name: "SwiftyBlockchainTests",
+                    dependencies: ["SwiftyBlockchain"])
     ]
 )
