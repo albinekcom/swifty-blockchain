@@ -19,7 +19,3 @@ jobs:
       run: swift test --enable-code-coverage
     - name: Code coverage
       uses: maxep/spm-lcov-action@0.3.1
-      with:
-        output-file: ./coverage/lcov.info
-
-
