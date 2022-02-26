@@ -1,9 +1,9 @@
 import XCTest
-@testable import SwiftyBlockchainCore
+@testable import SwiftyBlockchain
 
 final class BlockchainTests: XCTestCase {
 
-    func testAppendBlock() {
+    func test_appendBlock() {
         var blockchain = Blockchain()
         XCTAssertEqual(0, blockchain.blocks.count)
 
@@ -16,7 +16,7 @@ final class BlockchainTests: XCTestCase {
         XCTAssertEqual(2, blockchain.blocks.count)
     }
 
-    func testDescription() {
+    func test_description() {
         var blockchain = Blockchain()
         XCTAssertEqual("Blockchain:\n", blockchain.description)
 
@@ -28,5 +28,5 @@ final class BlockchainTests: XCTestCase {
         blockchain.append(block: block2)
         XCTAssertEqual("Blockchain:\n  #0: blockHash: 6972330665191808743, transactions: [\"test transaction 1\"], previousHash: 0;\n  #1: blockHash: 7496021644692191452, transactions: [\"test transaction 1\", \"test transaction 2\"], previousHash: 0;\n", blockchain.description)
     }
-
+    
 }

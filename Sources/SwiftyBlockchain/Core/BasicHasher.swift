@@ -1,6 +1,4 @@
-import Foundation
-
-public struct BasicHasher {
+struct BasicHasher {
     
     static func hash(input: String) -> Int {
         let unicodeScalars = input.unicodeScalars.map { $0.value }

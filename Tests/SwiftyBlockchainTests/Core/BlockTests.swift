@@ -1,9 +1,9 @@
 import XCTest
-@testable import SwiftyBlockchainCore
+@testable import SwiftyBlockchain
 
 final class BlockTests: XCTestCase {
 
-    func testBlockHash() {
+    func test_blockHash() {
         let block1 = Block(previousHash: 0, transactions: ["test transaction 1"])
         XCTAssertEqual(6972330665191808743, block1.blockHash)
 
@@ -11,7 +11,7 @@ final class BlockTests: XCTestCase {
         XCTAssertEqual(6972330665163311824, block2.blockHash)
     }
 
-    func testDescription() {
+    func test_description() {
         let block1 = Block(previousHash: 0, transactions: ["test transaction 1"])
         XCTAssertEqual("blockHash: 6972330665191808743, transactions: [\"test transaction 1\"], previousHash: 0", block1.description)
 
