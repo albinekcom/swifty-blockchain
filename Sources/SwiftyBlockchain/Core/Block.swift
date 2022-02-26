@@ -5,9 +5,7 @@ struct Block {
     let transactions: [String]
     
     var blockHash: Int {
-        let hashes = [previousHash, BasicHasher.hash(input: transactions.description)]
-        
-        return BasicHasher.hash(input: hashes.description)
+        BasicHasher.hash(input: [previousHash, BasicHasher.hash(input: transactions.description)].description)
     }
     
     init(previousHash: Int, transactions: [String]) {
