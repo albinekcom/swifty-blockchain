@@ -1,6 +1,8 @@
 @main
 struct SwiftyBlockchainMain {
     
+    static var printerType: Printer.Type = SystemPrinter.self
+    
     static func main() {
         var blockchain = Blockchain()
 
@@ -12,8 +14,20 @@ struct SwiftyBlockchainMain {
 
         let block2 = Block(previousHash: block1.blockHash, transactions: ["transaction 3", "transaction 4"])
         blockchain.append(block: block2)
-
-        print(blockchain)
+        
+        printerType.display(text: blockchain.description)
     }
+    
+}
+
+protocol Printer {
+    
+    static func display(text: String)
+    
+}
+
+private struct SystemPrinter: Printer {
+    
+    static func display(text: String) { print(text) }
     
 }
